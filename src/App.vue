@@ -3,6 +3,7 @@
     <Header />
     <Home />
     <AddInfo />
+    <Footer />
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import Header from './components/Header'
 import Home from './components/Home/Home'
 import AddInfo from './components/AddInfo'
+import Footer from './components/Footer'
 export default {
   name: 'App',
   components: {
     Header,
     Home,
-    AddInfo
+    AddInfo,
+    Footer
   }
 }
 </script>
