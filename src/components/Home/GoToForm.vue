@@ -328,7 +328,6 @@
                     <p class="error mt" v-if="!$v.controls.control17.numeric && $v.controls.control17.$dirty">
                       Ви ввели недопустиме значення. Введіть числове значення
                     </p>
-                    {{ $v.controls.control17 }}
                   </div>
                 </form>
               </v-card-text>
@@ -369,7 +368,7 @@
 import { required, numeric, helpers, email, requiredIf } from 'vuelidate/lib/validators'
 import { VueTelInput } from 'vue-tel-input'
 
-const alpha = helpers.regex('alpha', /^[a-zа-яё]+$/i)
+const alpha = helpers.regex('alpha', /^([а-я ]+|[a-z ]+|[А-Яа-яёЁЇїІіЄєҐґ ]+)$/i)
 
 export default {
   name: 'GoToForm',
@@ -381,7 +380,7 @@ export default {
       questionnaire: false,
       minStep: 1,
       maxStep: 17,
-      step: 17,
+      step: 1,
       progressbarValue: 1.7,
       radioGroup: 1,
       date: '',
@@ -561,6 +560,10 @@ export default {
 
       .subtitle {
         margin: 10px 0 15px;
+      }
+
+      .v-card {
+        min-height: 440px;
       }
     }
 

@@ -44,6 +44,10 @@ export default {
   .icon {
     width: 40px;
     margin-left: 10px;
+
+    @media screen and (max-width: 950px) {
+      display: none;
+    }
   }
 
   .content-wrapper {
@@ -56,6 +60,10 @@ export default {
     width: 100%;
     line-height: 1.55;
     margin: 7px 0 0 5px;
+
+    @media screen and (max-width: 950px) {
+      margin: 7px 0 0 50;
+    }
   }
 
   .title {

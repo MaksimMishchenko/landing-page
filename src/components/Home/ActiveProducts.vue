@@ -82,6 +82,7 @@ export default {
       font-size: 20px;
       font-weight: 600;
       color: #d43149;
+      text-align: center;
     }
   }
 
@@ -98,6 +99,14 @@ export default {
     width: 100%;
     justify-content: space-between;
     padding: 20px 50px;
+
+    @media screen and (max-width: 1520px) {
+      padding: 20px 30px;
+    }
+
+    @media screen and (max-width: 1230px) {
+      padding: 20px;
+    }
 
     .title {
       margin-top: 5px;
@@ -160,6 +169,15 @@ export default {
       margin-top: 15px;
       width: 30%;
 
+      @media screen and (max-width: 1520px) {
+        padding: 40px 10px;
+        width: 25%;
+      }
+
+      @media screen and (max-width: 1230px) {
+        display: none;
+      }
+
       .title {
         margin-bottom: 5px;
       }
@@ -170,6 +188,15 @@ export default {
       margin: 15px 0 0 15px;
       justify-content: center;
       padding: 20px;
+
+      @media screen and (max-width: 1520px) {
+        width: calc(75% - 15px);
+      }
+
+      @media screen and (max-width: 1230px) {
+        width: 100%;
+        margin: 15px 0 0 0;
+      }
     }
   }
 
@@ -201,16 +228,27 @@ export default {
     }
 
     span {
+      text-align: center;
+      white-space: nowrap;
+
       &:first-child {
         color: #1f1f1f;
         border: 1px solid #1f1f1f;
         border-radius: 5px;
         font-size: 18px;
-        padding: 1px 35px;
+        padding: 1px 0;
       }
 
       &:nth-child(2) {
         padding: 4px 15px;
+
+        @media screen and (max-width: 1520px) {
+          padding: 4px 5px;
+        }
+      }
+
+      &:first-child, &:nth-child(2) {
+        width: 45%;
       }
 
       &:last-child {

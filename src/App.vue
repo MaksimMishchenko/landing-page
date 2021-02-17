@@ -37,6 +37,11 @@ export default {
   .horizontal-padding {
     padding-right: 100px;
     padding-left: 100px;
+
+    @media screen and (max-width: 1350px) {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
   }
   .base-btn {
     color: #ffffff;
