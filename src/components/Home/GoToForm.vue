@@ -438,7 +438,6 @@ export default {
         if (!currentControl.$invalid) {
           if (this.step === this.maxStep) {
             this.submit()
-            this.step = 1
           } else {
             this.step++
             this.progressbarValue += 5.8
@@ -682,5 +681,9 @@ export default {
       border: none;
       border-bottom: 1px solid #bbb;
     }
+  }
+
+  .v-date-picker-table .v-btn.v-btn--active {
+    color: inherit !important;
   }
 </style>
